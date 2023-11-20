@@ -3,16 +3,147 @@
 :root {
   --ralewayFont: "Raleway", sans-serif;
   --grey: #708090;
+  --pinkRed: #e6455c;
+  --blue: #45b4e6;
+  --orange: #e66d45;
+  --mint: #3ae8c0;
+  --darkBrown: #191818;
+  --offwhite: #efeee5;
 }
 
 body {
-  background-color: var(--grey);
+  background-color: var(--offwhite);
+  margin: 0;
+}
+
+header {
+  text-align: right;
+  margin: 0;
+  padding: 5%;
+  padding-top: 1%;
+  background-color: var(--pinkRed);
 }
 
 h1 {
   font-family: var(--ralewayFont);
+  color: var(--mint);
+  font-size: 4em;
+}
+
+h2 {
+  font-family: var(--ralewayFont);
+  color: var(--offwhite);
+  font-size: 3em;
 }
 
 p {
   font-family: var(--ralewayFont);
+  color: var(--darkBrown);
+  font-weight: 600;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+a {
+  color: var(--darkBrown);
+}
+
+a:hover {
+  color: var(--pinkRed);
+}
+
+.tagline {
+  color: var(--offwhite);
+  font-size: 1.5em;
+}
+
+footer {
+  text-align: center;
+  padding-top: 10%;
+}
+
+.altColor {
+  color: var(--offwhite);
+}
+
+.portraitImage {
+  display: block;
+  border-radius: 50%;
+  max-width: 100%;
+  width: auto;
+  height: 10em;
+  padding: 2%;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  max-width: 60%;
+  margin: 10% auto;
+  margin-bottom: 5%;
+  padding-top: 5%;
+  text-align: center;
+  background-color: var(--pinkRed);
+  border-radius: 5%;
+}
+
+.flexItem {
+  box-sizing: border-box;
+  flex-basis: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+#result {
+  background-color: var(--offwhite);
+  margin: 5%;
+  border-radius: 5%;
+}
+
+.quoteDiv {
+  display: flex;
+  justify-content: center;
+}
+.quoteBtn {
+  background-color: var(--pinkRed);
+  color: var(--offwhite);
+  font-family: var(--ralewayFont);
+  font-size: 2em;
+  font-weight: 800;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5em;
+}
+
+@media only screen and (max-width: 600px) {
+  h1 {
+    font-size: 3em;
+  }
+
+  h2 {
+    font-size: 2em;
+  }
+
+  .tagline {
+    font-size: 1em;
+  }
+  .container {
+    margin: 10% auto;
+  }
+
+  .flexItem {
+    flex-basis: 100%;
+  }
+
+  .portraitImage {
+    height: 6em;
+  }
+
+  .quoteBtn {
+    font-size: 1.5em;
+  }
 }

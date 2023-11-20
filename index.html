@@ -5,12 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Words from the West</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
   </head>
+
   <body>
+    <header>
+      <h1>Welcome to the world of <span class="altColor">Kanye</span></h1>
+      <p class="tagline">Random quotes straight to your face!</p>
+    </header>
+
     <div class="container">
-      <h1>Kanye says</h1>
-      <div id="result"></div>
+      <div class="flexItem">
+        <img class="portraitImage" src="images/kanyePortrait.jpg" />
+      </div>
+      <div class="flexItem"><h2>Kanye says</h2></div>
+      <div class="flexItem" id="result"></div>
     </div>
+    <div class="quoteDiv">
+      <button class="quoteBtn">Get a new quote!</button>
+    </div>
+
+    <footer>
+      <p>
+        Henrik Andersen - 2023 - What? - Quotes courtesy of
+        <a link href="https://kanye.rest/">https://kanye.rest/</a>
+      </p>
+    </footer>
     <script src="script.js"></script>
   </body>
 </html>
