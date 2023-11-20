@@ -1,6 +1,11 @@
 let responseData;
 
-document.addEventListener("DOMContentLoaded", fetchData);
+document.addEventListener("DOMContentLoaded", function () {
+  fetchData();
+
+  const fetchNewQuote = document.getElementById("quoteBtn");
+  fetchNewQuote.addEventListener("click", fetchData);
+});
 
 async function fetchData() {
   const apiUrl = "https://api.kanye.rest";
