@@ -2,7 +2,7 @@
 
 :root {
   --ralewayFont: "Raleway", sans-serif;
-  --grey: #708090;
+  --grey: #888883;
   --pinkRed: #e6455c;
   --blue: #45b4e6;
   --orange: #e66d45;
@@ -13,15 +13,32 @@
 
 body {
   background-color: var(--offwhite);
+  max-width: 100vw;
   margin: 0;
 }
 
 header {
+  width: inherit;
   text-align: right;
-  margin: 0;
-  padding: 5%;
   padding-top: 1%;
   background-color: var(--pinkRed);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+header h1 {
+  padding-right: 50px;
+}
+
+header p {
+  padding-right: 50px;
+  padding-bottom: 10px;
 }
 
 h1 {
@@ -33,7 +50,8 @@ h1 {
 h2 {
   font-family: var(--ralewayFont);
   color: var(--offwhite);
-  font-size: 3em;
+  font-size: 2em;
+  margin-bottom: -1%;
 }
 
 p {
@@ -62,6 +80,10 @@ footer {
   padding-top: 10%;
 }
 
+footer p {
+  padding: 0;
+}
+
 .altColor {
   color: var(--offwhite);
 }
@@ -70,8 +92,6 @@ footer {
   display: block;
   border-radius: 50%;
   max-width: 100%;
-  width: auto;
-  height: 10em;
   padding: 2%;
 }
 
@@ -80,27 +100,31 @@ footer {
   flex-wrap: wrap;
   justify-content: space-evenly;
   max-width: 60%;
-  margin: 10% auto;
-  margin-bottom: 5%;
-  padding-top: 5%;
+  padding: 2% 2% 4% 2%;
   text-align: center;
   background-color: var(--pinkRed);
-  border-radius: 5%;
+  border-radius: 20px;
 }
 
 .flexItem {
   box-sizing: border-box;
   flex-basis: 45%;
   display: flex;
+  align-items: center;
   justify-content: center;
   margin-left: 2%;
   margin-right: 2%;
 }
 
+.textBox {
+  display: flex;
+  flex-direction: column;
+}
+
 #result {
   background-color: var(--offwhite);
   margin: 5%;
-  border-radius: 5%;
+  border-radius: 20px;
 }
 
 .quoteDiv {
@@ -137,16 +161,19 @@ footer {
   .tagline {
     font-size: 1em;
   }
-  .container {
-    margin: 10% auto;
-  }
 
   .flexItem {
     flex-basis: 100%;
   }
 
+  .kanyePortraitSays {
+    margin-bottom: -10%;
+  }
+
   .portraitImage {
-    height: 6em;
+    max-height: 100%;
+    height: 60%;
+    width: auto;
   }
 
   .quoteBtn {
